@@ -63,12 +63,18 @@ function getThisFileSectionStr($contents)
 {
   foreach($contents as $content)
     {
-      if(array_key_exists('thisFile', $content) && $content['thisFile']) return $content['sectionStr'] . '&nbsp;&nbsp;&nbsp;' . $content['head'];
+      if(array_key_exists('thisFile', $content) && $content['thisFile'])
+		{
+		  if (array_key_exists('sectionStr', $content))
+			return $content['sectionStr'] . '&nbsp;&nbsp;&nbsp;' . $content['head'];
+		  else
+			return '&nbsp;&nbsp;&nbsp;' . $content['head'];
+		}
       elseif(isset($content['subcontents']))
-	{
-	  $ret = getThisFileSectionStr($content['subcontents']);
-	  if(!empty($ret)) return $ret;
-	}
+		{
+		  $ret = getThisFileSectionStr($content['subcontents']);
+		  if(!empty($ret)) return $ret;
+		}
     }
   return '';
 }
@@ -104,7 +110,7 @@ function mkSideNavi($contents)
 		  if (array_key_exists('thisFileAncestor', $content) && $content['thisFileAncestor']) $ret = $ret . " class=\"selected_ancestor\"";
 		  $ret = $ret . '>';
 		}
-      $ret = $ret . $content['sectionStr'];
+      if (array_key_exists('sectionStr', $content)) $ret = $ret . $content['sectionStr'];
       $ret = $ret . '&nbsp;&nbsp;';
       $ret = $ret . $content['head'];
       if(array_key_exists('lock', $content) && $content['lock'])
