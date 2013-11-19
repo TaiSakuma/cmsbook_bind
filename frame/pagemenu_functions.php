@@ -17,7 +17,7 @@ function addHref(&$contents)
 {
   foreach($contents as &$content)
     {
-      $content['href'] = '../'; 
+      $content['href'] = '../';
 
       if(array_key_exists('dir', $content))
 	$content['href'] = $content['href'] . $content['dir'] . '/';
@@ -35,9 +35,9 @@ function addThisFile(&$contents, $thisDir, $thisFile)
   foreach($contents as &$content)
     {
       if (array_key_exists('dir', $content) && $thisDir == $content['dir'] && $thisFile == $content['file'])
-	  $content['thisFile'] = TRUE;
+		$content['thisFile'] = TRUE;
       elseif(isset($content['subcontents']))
-	  addThisFile($content['subcontents'], $thisDir, $thisFile);
+		addThisFile($content['subcontents'], $thisDir, $thisFile);
     }
 }
 
@@ -83,40 +83,40 @@ function mkSideNavi($contents)
     {
       $sub = '';
       if(isset($content['subcontents']))
-	{
-	  $ret = $ret . "\n";
-	  $sub = mkSideNavi($content['subcontents']);
-	}
+		{
+		  $ret = $ret . "\n";
+		  $sub = mkSideNavi($content['subcontents']);
+		}
       $ret = $ret . '<li';
       $ret = $ret . ' class="';
       if (array_key_exists('thisFile', $content) && $content['thisFile']) $ret = $ret . " selected";
       if (array_key_exists('thisFileAncestor', $content) && $content['thisFileAncestor']) $ret = $ret . " selected_ancestor";
       if(!empty($sub)) $ret = $ret . " has_subcontents";
       $ret = $ret . '"';
-      $ret = $ret . '>'; 
-      $ret = $ret . '<div>'; 
+      $ret = $ret . '>';
+      $ret = $ret . '<div>';
       if (!array_key_exists('nolink', $content) || !$content['nolink']) 
-	{
-	  $ret = $ret . '<a href="'; 
-	  $ret = $ret . $content['href']; 
-	  $ret = $ret . '"'; 
-	  if (array_key_exists('thisFile', $content) && $content['thisFile']) $ret = $ret . " class=\"selected\"";
-	  if (array_key_exists('thisFileAncestor', $content) && $content['thisFileAncestor']) $ret = $ret . " class=\"selected_ancestor\"";
-	  $ret = $ret . '>'; 
-	}
+		{
+		  $ret = $ret . '<a href="';
+		  $ret = $ret . $content['href'];
+		  $ret = $ret . '"';
+		  if (array_key_exists('thisFile', $content) && $content['thisFile']) $ret = $ret . " class=\"selected\"";
+		  if (array_key_exists('thisFileAncestor', $content) && $content['thisFileAncestor']) $ret = $ret . " class=\"selected_ancestor\"";
+		  $ret = $ret . '>';
+		}
       $ret = $ret . $content['sectionStr'];
-      $ret = $ret . '&nbsp;&nbsp;'; 
+      $ret = $ret . '&nbsp;&nbsp;';
       $ret = $ret . $content['head'];
       if(array_key_exists('lock', $content) && $content['lock'])
-	{
-	  $ret = $ret . '&nbsp;&nbsp;'; 
-	  $ret = $ret . "\n";
-	  $ret = $ret . mkLockIcon();
-	  $ret = $ret . "\n";
-	}
+		{
+		  $ret = $ret . '&nbsp;&nbsp;';
+		  $ret = $ret . "\n";
+		  $ret = $ret . mkLockIcon();
+		  $ret = $ret . "\n";
+		}
       if (!array_key_exists('nolink', $content) || !$content['nolink']) 
-	$ret = $ret . '</a>'; 
-      $ret = $ret . '</div>'; 
+		$ret = $ret . '</a>';
+      $ret = $ret . '</div>';
       if(!empty($sub)) $ret = $ret . $sub;
       $ret = $ret . "</li>\n";
     }
@@ -150,7 +150,7 @@ function mkBreadCrumb($contents)
     {
       if(array_key_exists('thisFile', $content) && $content['thisFile']) 
 	{
-	  $ret = '<a href="'. $content['href'] . '">'; 
+	  $ret = '<a href="'. $content['href'] . '">';
 	  $ret = $ret . $content['head'] . '</a>';
 	  return $ret;
 	}
@@ -162,7 +162,7 @@ function mkBreadCrumb($contents)
 	      $pre = '';
 	      if (!array_key_exists('nolink', $content) || !$content['nolink'])
 		{
-		  $pre = $pre . '<a href="'. $content['href'] . '">'; 
+		  $pre = $pre . '<a href="'. $content['href'] . '">';
 		}
 	      $pre = $pre . $content['head'];
 	      if (!array_key_exists('nolink', $content) || !$content['nolink'])
