@@ -1,0 +1,6 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+  deny from all
+</Files>
+
+allow from all
+
