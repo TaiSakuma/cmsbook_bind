@@ -31,7 +31,7 @@ function mkTopContent($topcontents, $parentDir)
   return $ret;
 }
 ?>
-<div class="span-6 border">
+<div class="span-6 border" id="pagemenucolumn">
 <div id="pagemenutitle">
 <?php echo mkTopContent($topcontents, $parentDir); ?>
 </div>
