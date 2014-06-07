@@ -18,7 +18,7 @@ function mkTopContent($topcontents, $parentDir)
 	}
       else
 	{
-	  $ret = $ret . '<a href="" class="selected">'; 
+	  continue;
 	}
 
       if(array_key_exists('head', $content))
