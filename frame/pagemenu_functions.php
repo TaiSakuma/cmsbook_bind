@@ -124,13 +124,10 @@ function mkSideNavi($contents)
 		  $ret = $ret . mkLockIcon();
 		  $ret = $ret . "\n";
 		}
-      if(array_key_exists('localonly', $content))
+      if(array_key_exists('localonly', $content) & $content['localonly'])
 	{
-	  if($content['localonly'])
-	    {
-	      $ret = $ret . '&nbsp;&nbsp;';
-	      $ret = $ret . '<i class="el el-home"></i>';
-	    }
+	  $ret = $ret . '&nbsp;&nbsp;';
+	  $ret = $ret . '<i class="el el-home" style="font-size:0.6em"></i>';
 	}
       if (!array_key_exists('nolink', $content) || !$content['nolink']) 
 		$ret = $ret . '</a>';
