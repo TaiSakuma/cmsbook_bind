@@ -118,12 +118,10 @@ function mkSideNavi($contents)
       $ret = $ret . '&nbsp;&nbsp;';
       $ret = $ret . $content['head'];
       if(array_key_exists('lock', $content) && $content['lock'])
-		{
-		  $ret = $ret . '&nbsp;&nbsp;';
-		  $ret = $ret . "\n";
-		  $ret = $ret . mkLockIcon();
-		  $ret = $ret . "\n";
-		}
+	{
+	  $ret = $ret . '&nbsp;&nbsp;';
+	  $ret = $ret . '<i class="el el-lock" style="font-size:0.6em"></i>';
+	}
       if(array_key_exists('localonly', $content) && $content['localonly'])
 	{
 	  $ret = $ret . '&nbsp;&nbsp;';
