@@ -87,6 +87,10 @@ function mkSideNavi($contents)
   $ret = $ret . "<ul>\n";
   foreach($contents as $content)
     {
+      if(array_key_exists('localonly', $content))
+	{
+	  if($content['localonly'] & ($_SERVER["SERVER_NAME"] != 'localhost')) continue;
+	}
       $sub = '';
       if(isset($content['subcontents']))
 		{
