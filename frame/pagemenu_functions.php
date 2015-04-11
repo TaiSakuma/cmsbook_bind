@@ -89,7 +89,7 @@ function mkSideNavi($contents)
     {
       if(array_key_exists('localonly', $content))
 	{
-	  if($content['localonly'] & ($_SERVER["SERVER_NAME"] != 'localhost')) continue;
+	  if($content['localonly'] && ($_SERVER["SERVER_NAME"] != 'localhost')) continue;
 	}
       $sub = '';
       if(isset($content['subcontents']))
@@ -124,7 +124,7 @@ function mkSideNavi($contents)
 		  $ret = $ret . mkLockIcon();
 		  $ret = $ret . "\n";
 		}
-      if(array_key_exists('localonly', $content) & $content['localonly'])
+      if(array_key_exists('localonly', $content) && $content['localonly'])
 	{
 	  $ret = $ret . '&nbsp;&nbsp;';
 	  $ret = $ret . '<i class="el el-home" style="font-size:0.6em"></i>';
