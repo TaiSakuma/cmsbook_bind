@@ -37,7 +37,7 @@ function mkSubHeadNavi($topcontents, $parentDir)
 	  if($content['right']) $ret = $ret . ' style="float:right"';
 	}
       $ret = $ret . '>'; 
-      if(array_key_exists('localonly', $content) & $content['localonly'])
+      if(array_key_exists('localonly', $content) && $content['localonly'])
 	{
 	  $ret = $ret . '<i class="el el-home" style="font-size:0.6em";></i>';
 	  $ret = $ret . '&nbsp;';
