@@ -13,6 +13,11 @@ function mkSubHeadNavi($topcontents, $parentDir)
 	{
 	  if($content['localonly'] & ($_SERVER["SERVER_NAME"] != 'localhost')) continue;
 	}
+      if(array_key_exists('br', $content) && $content['br'])
+	{
+	      $ret = $ret . "<br />\n";
+	      continue;
+	}
       if(array_key_exists('right', $content))
 	{
 	  if($content['right'])
