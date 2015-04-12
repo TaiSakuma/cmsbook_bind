@@ -44,12 +44,12 @@ function mkSubHeadNavi($topcontents, $parentDir)
       $ret = $ret . '>'; 
       if(array_key_exists('localonly', $content) && $content['localonly'])
 	{
-	  $ret = $ret . '<i class="el el-home" style="font-size:0.6em";></i>';
+	  $ret = $ret . '<i class="el el-home" style="font-size:0.6em"></i>';
 	  $ret = $ret . '&nbsp;';
 	}
       if(array_key_exists('lock', $content) && $content['lock'])
 	{
-	  $ret = $ret . '<i class="el el-lock" style="font-size:0.6em";></i>';
+	  $ret = $ret . '<i class="el el-lock" style="font-size:0.6em"></i>';
 	  $ret = $ret . '&nbsp;';
 	}
       $ret = $ret . $content['head'];
