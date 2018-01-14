@@ -11,6 +11,7 @@ $cmsbook_site_config_url = $cmsbook_bind_url . "/site_config";
 $cmsbook_site_extra = $cmsbook_bind . "/site_extra";
 $cmsbook_site_extra_url = $cmsbook_bind_url . "/site_extra";
 
+$cmsbook_external = $cmsbook_bind . "/external";
 $cmsbook_external_url = $cmsbook_bind_url . "/external";
 
 $cmsbook_top_frame = $cmsbook_bind . "/frame";
