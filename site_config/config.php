@@ -1,6 +1,6 @@
-<?php 
-$cmsbook_root = "/Users/sakuma/work/cms/c131118_github_cmsbook";
-$cmsbook_root_url = "/~sakuma/cms/c131118_github_cmsbook";
+<?php
+$cmsbook_root = "";
+$cmsbook_root_url = "";
 
 $cmsbook_bind = $cmsbook_root . "/cmsbook_bind";
 $cmsbook_bind_url = $cmsbook_root_url . "/cmsbook_bind";
