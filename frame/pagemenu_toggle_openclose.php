@@ -1,4 +1,4 @@
-<script type="text/javascript">                                         
+<script type="text/javascript">
  $(document).ready(function() {
      if ($("#contentcolumn").height() < $("#pagemenucolumn").height()) {
        $("#contentcolumn").css("height", $("#pagemenucolumn").height());
@@ -21,4 +21,4 @@
 	 return false;
        });
  });
-</script>      
+</script>

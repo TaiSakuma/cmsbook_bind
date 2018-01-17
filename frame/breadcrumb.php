@@ -1,5 +1,5 @@
 <div id="breadcrumb">
 <?php
-   echo(mkBreadCrumb($contents));
- ?>
+echo(mkBreadCrumb($contents));
+?>
 </div>
