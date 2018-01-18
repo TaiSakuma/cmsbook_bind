@@ -1,5 +1,4 @@
 <?php include(dirname(__FILE__) . "/header.php"); ?>
-</div><!--container -->
 <?php include(dirname(__FILE__) . "/subheadnavi.php"); ?>
 <div class="container">
 <div class="span-24 torse">
