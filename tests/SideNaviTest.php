@@ -34,4 +34,20 @@ class SideNaviTest extends TestCase
 
         $this->assertEquals($expected_html, $actual_html);
     }
+
+    public function testSideNaviEmpty()
+    {
+        $contents = array();
+        $expected_html = '';
+
+        $thisDir = 'test_phpunit';
+        $thisFile = 'web.php';
+        addSectionStr($contents);
+        addHref($contents);
+        addThisFile($contents, $thisDir, $thisFile);
+        addThisFileAncestor($contents);
+        $actual_html = mkSideNavi($contents);
+
+        $this->assertEquals($expected_html, $actual_html);
+    }
 }
