@@ -1,3 +1,8 @@
+<?php
+if (!isset($cmsbook_root)) {
+    include(dirname(__FILE__) . '/../site_config/config.php');
+}
+?>
 <?php include(dirname(__FILE__) . "/header.php"); ?>
 <?php include(dirname(__FILE__) . "/subheadnavi.php"); ?>
 <div class="container">
