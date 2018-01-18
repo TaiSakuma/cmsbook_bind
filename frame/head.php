@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . '/../vendor/autoload.php';
 if (!isset($cmsbook_root)) {
     include(dirname(__FILE__) . '/../site_config/config.php');
 }
