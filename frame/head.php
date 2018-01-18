@@ -1,9 +1,9 @@
-<?php include($cmsbook_top_frame . "/header.php"); ?>
+<?php include(dirname(__FILE__) . "/header.php"); ?>
 </div><!--container -->
-<?php include($cmsbook_top_frame . "/subheadnavi.php"); ?>
+<?php include(dirname(__FILE__) . "/subheadnavi.php"); ?>
 <div class="container">
 <div class="span-24 torse">
-<?php include($cmsbook_top_frame . "/pagemenu.php"); ?>
+<?php include(dirname(__FILE__) . "/pagemenu.php"); ?>
 <div class="span-18 last" id="contentcolumn">
-<?php include($cmsbook_top_frame . "/breadcrumb.php"); ?>
+<?php include(dirname(__FILE__) . "/breadcrumb.php"); ?>
 <div id="content">
