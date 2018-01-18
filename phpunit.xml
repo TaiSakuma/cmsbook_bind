@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php">
+    <testsuites>
+        <testsuite name="cmsbook_bind">
+            <directory suffix="Test.php">tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>frame</directory>
+        </whitelist>
+    </filter>
+</phpunit>
