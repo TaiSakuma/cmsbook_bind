@@ -8,8 +8,8 @@ php:
   - 7.2
 matrix:
     allow_failures:
-      - python: 5.3
-      - python: 5.5
+      - php: 5.3
+      - php: 5.5
 install:
   - composer install --no-dev --quiet
 script: phpunit -c phpunit.xml
