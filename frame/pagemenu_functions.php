@@ -99,9 +99,9 @@ function mkSideNavi($contents)
         }
         $ret = $ret . '<li';
         $ret = $ret . ' class="';
-        if (array_key_exists('thisFile', $content) && $content['thisFile']) $ret = $ret . "selected";
+        if (array_key_exists('thisFile', $content) && $content['thisFile']) $ret = $ret . " selected";
         if (array_key_exists('thisFileAncestor', $content) && $content['thisFileAncestor']) $ret = $ret . " selected_ancestor";
-        if(!empty($sub)) $ret = $ret . "has_subcontents";
+        if(!empty($sub)) $ret = $ret . " has_subcontents";
         $ret = $ret . '"';
         $ret = $ret . '>';
         $ret = $ret . '<div>';
