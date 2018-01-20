@@ -1,6 +1,6 @@
 <?php
 $thisDir=basename(getcwd());
-$thisFile=basename($_SERVER['PHP_SELF']);
+$thisFile=basename($_SERVER['REQUEST_URI']); // e.g., "md.php?md=page1.md""
 
 function mkTopContent($topcontents, $parentDir)
 {
