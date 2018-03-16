@@ -12,7 +12,7 @@
    include($cmsbook_site_config . "/site_html_head.php");
 ?>
 </head>
-<body onload="prettyPrint()">
+<body>
 <div class="container">
   <div class="span-24 last">
     <div id="header">
